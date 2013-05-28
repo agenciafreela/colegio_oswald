@@ -1,0 +1,84 @@
+@import 'colors.less';
+@import 'elements';
+#event-list{
+	margin-top: 20px;
+
+	.event-label{
+		background: @blue;
+		color: @light;
+		font-size: 20px;
+		font-style: italic;
+		padding: 10px 20px;
+		width: 95px;
+		line-height: 1;
+		margin-top: 12px;
+
+		small{
+			font-size: 17px;
+			display: block;
+		}
+	}
+
+	.event-grid{
+		width: 805px;
+		float: left;
+
+		.span3{
+			background: @gray;
+			margin: 0;
+			width: (805px - 4px) / 4;
+			border: 1px dashed @dark;
+			.transition();
+
+			&:hover, &:focus, .active{
+				background: @light;	
+			}
+
+			section{
+				padding: 10px;
+				font-size: 11px;
+				height: 60px;
+				position: relative;
+
+				h1{
+					font-size: 14px;
+					margin: 0;
+					line-height: 1;
+				}
+
+				.permalink{
+					text-align: center;
+					
+					a{
+						color: @green;
+						font-size: inherit;
+						font-style: italic;
+					}	
+				}
+
+				.unit{
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					font-size: 0;
+
+					span{
+						display: inline-block;
+						font-size: 11px;
+						background: @green;
+						color: @light;
+						.square(17px);
+
+						&.gs{
+							background: @orange;
+						}
+
+						&.tp{
+							background: @blue;
+						}
+					}
+				}
+			}
+		}
+	}
+}
