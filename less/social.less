@@ -1,5 +1,7 @@
 #social{
-	.social-btn{
+	// Link to social network
+	// ====================================================================================
+	a{
 		img{
 			width: 38px;
 		}
@@ -16,5 +18,14 @@
 		&.selected{
 			border-bottom: 4px solid @dark;
 		}
+
+		&#btn-facebook{
+			width: 170px; // Fuck ie8
+		}
+		&#btn-twitter{
+			width: 150px; // Fuck ie8
+		}
 	}
+	// ====================================================================================
+	// End Link to social network
 }

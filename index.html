@@ -21,7 +21,7 @@
 
         <div class="container">
             <!-- Header -->
-            <header>
+            <header id="header">
                 <div>
                   <div class="row-fluid">
                     
@@ -93,7 +93,7 @@
 
                   <!--Sidebar content-->
                   <div class="span2">
-                    <nav>
+                    <aside>
                       <ul class="unstyled">
                         <li><a href="">Nossa História</a></li>
                         <li><a href="">Proposta</a></li>
@@ -106,19 +106,22 @@
                         <li><a href="">Nossa Equipe</a></li>
                         <li><a href="">Projetos</a></li>
                       </ul>
-                    </nav>
+                    </aside>
                   </div>
                   <!--End Sidebar content-->
 
                   <!--Body content-->
                   <div class="span10">
-                    <section>
-                      <h1>Nossa História</h1>
+                    <!-- PS.: Change the id -->
+                    <article id="content-{page-name}">
+                      <header id="header-{page-name}">
+                        <h1>Nossa História</h1>
+                      </header>
                       <p> Fundado na segunda metade da década de 70, o Colégio Oswald de Andrade está intimamente associado a um conceito que o caracteriza desde a sua origem: a inovação. Isso se deve a fatos que fazem parte da trajetória da instituição. </p>
                       <p>Fomos inovadores ao implantar o Estudo de Meio como recurso pedagógico, ao instituir no Ensino Fundamental o trabalho com Projetos de Pesquisa e, no Ensino Médio, o projeto Teses, hoje integrados à prática pedagógica de outras importantes instituições de ensino. Inovamos, também, ao introduzir no currículo a reunião de classe, espaço formal de exercício da cidadania.</p>
                       <p>Valorizamos o exercício da inovação especialmente naquilo que, de fato, faz a diferença; ou seja, na forma como entendemos e praticamos o ensino, promovendo a aprendizagem. Desde sempre, nosso aluno é chamado a conhecer e a reconhecer o legado do conhecimento produzido pelo homem ao longo da história para compreender conceitos, fatos e metodologias que promovem as habilidades necessárias a uma aprendizagem consistente. É incentivado a desenvolver competências que lhe permitam realizar projetos pessoais, tomar posições e agir com autonomia, responsabilidade e independência, valorizando o espaço coletivo e a cooperação. É estimulado, ainda, a enfrentar os desafios no percurso que leva à vida adulta.</p>
                       <p>É esse aluno bem instrumentalizado, que considera o sentido ético dos relacionamentos e sua ação sobre o mundo, apto a escolher diferentes caminhos de formação acadêmica e profissional, que nos dedicamos a formar todos os dias.</p>
-                    </section>
+                    <article>
                   </div>
                   <!--End Body content-->
                 </div>
@@ -142,7 +145,7 @@
 
                   <!-- Column Element 1 -->
                   <div class="span3">
-                    <section>
+                    <section id="content-events">
                       
                       <!-- Unidades -->
                       <div class="unit">
@@ -165,7 +168,7 @@
 
                   <!-- Column Element 2 -->
                   <div class="span3">
-                    <section>
+                    <section id="content-events-{event-name}">
                       
                       <!-- Unidades -->
                       <div class="unit">
@@ -188,7 +191,7 @@
 
                   <!-- Column Element 3 -->
                   <div class="span3">
-                    <section>
+                    <section id="content-events-{event-name}">
                       
                       <!-- Unidades -->
                       <div class="unit">
@@ -211,7 +214,7 @@
 
                   <!-- Column Element 4 -->
                   <div class="span3">
-                    <section>
+                    <section id="content-events-{event-name}">
                       
                       <!-- Unidades -->
                       <div class="unit">
@@ -285,7 +288,8 @@
                     <div class="text">
                       <p>Este sábado, na Cerro Corá, acontece a Mostra Cultural do Ensino Fundamental II e Médio. A partir das 11h, venham conferir os trabalhos e apresentações!! É o festival de talentos do colégio oswald. Alunos de todos períodos se apresentam. Está chegando! Este sábado, na Cerro Corá, acontece a Mostra Cultural do Ensino Fundamental II e Médio. A partir das 11h, venham conferir os trabalhos e apresentações!! Está chegando!</p>
                       <p>Este sábado, na Cerro Corá, acontece a Mostra Cultural do Ensino Fundamental II e Médio. A partir das 11h, venham conferir os trabalhos e apresentações!! Está chegando!</p>
-                      <p>Este sábado, na Cerro Corá, acontece a Mostra Cultural do Ensino Fundamental II e Médio. A partir das 11h, venham conferir os trabalhos e apresentações!!</p>
+                      <p>Este sábado, na Cerro Corá, acontece a Mostra Cultural do Ensino Fundamental II e Médio. A partir das 11h, venham conferir os trabalhos e apresentações!! Está chegando!</p>
+                      
                     </div>
 
                     <a href="" class="event-register">Inscrições aqui de 2/9 à 28/9</a>
@@ -304,7 +308,7 @@
 
             <div class="row-fluid" id="home-content">
               <!-- Lasted videos -->
-              <div class="span3">
+              <div class="span4">
                 <section id="lasted-videos">
                   <h1 class="dashed-bottom">
                     <img src="img/youtube.png">
@@ -327,26 +331,114 @@
                       <img src="img/video-thumb.png">
                       <img src="img/video-mark.png" class="video-mark">
                     </li>
+                    <li data-toggle="tooltip" title="Título imagem 5">
+                      <img src="img/video-thumb.png">
+                      <img src="img/video-mark.png" class="video-mark">
+                    </li>
                   </ul>
                 </section>
               </div>
               <!-- End Lasted videos -->
 
-              <div class="span9">
+              <div class="span8">
+                <div class="default-padding no-top">
 
-                <div id="social">
-                  <div class="dashed-bottom">
-                    <a href="" class="social-btn pull-right">
-                      <img src="img/twitter.png"> Twitter
-                    </a>
-                    <a href="" class="social-btn selected">
-                      <img src="img/facebook.png"> Facebook
-                    </a>
+                  <!-- Social Networks -->
+                  <div id="social">
+                    <div class="dashed-bottom">
+                      <a href="" class="social-btn pull-right" id="btn-twitter">
+                        <img src="img/twitter.png"> Twitter
+                      </a>
+                      <a href="" class="social-btn selected" id="btn-facebook">
+                        <img src="img/facebook.png"> Facebook
+                      </a>
+                    </div>
+
+                    <div id="facebook-view">
+                      <div class="fb-like-box" data-href="http://www.facebook.com/colegiooswald" data-width="600" data-height="350" data-show-faces="false" data-stream="true" data-show-border="false" data-header="false"></div>
+                    </div>
+                  </div>
+                  <!-- End Social Networks -->
+
+                  <div class="row-fluid" id="news">
+                    
+                    <!-- Issuu Embed -->
+                    <div class="span6" id="issuu-publications">
+                      <h1 class="dashed-bottom">Publicações</h1>
+                      <img src="img/issuu-embed.png" id="issuu-embed">
+                    </div>
+                    <!-- End Issuu Embed -->
+
+                    <!-- Blogs -->
+                    <div class="span6" id="blog">
+                      <h1 class="dashed-bottom">Blogs</h1>
+                      <section id="content-blogs">
+
+                        <!-- Ao trabalho -->
+                        <div class="blog media" id="ao-trabalho">
+                          <a href="" class="pull-left">
+                            <img src="img/blogs/ao-trabalho.jpg" data-src="holder.js/64x64">
+                          </a>
+                          <div class="media-body">
+                            <h4 class="media-heading"><a href="http://blogsdooswald.com.br/blog/index/cod/1/">Ao Trabalho</a></h4>
+                            <small>Blog sobre o mundo do trabalho, carreiras e profissões, por Cecília Vardi</small>
+                          </div>
+                        </div>
+                        <!-- End Ao trabalho -->
+
+                        <!-- Prefácio Cultural -->
+                        <div class="blog media" id="ao-trabalho">
+                          <a href="" class="pull-left">
+                            <img src="img/blogs/prefacio.jpg" data-src="holder.js/64x64">
+                          </a>
+                          <div class="media-body">
+                            <h4 class="media-heading"><a href="http://blogsdooswald.com.br/blog/index/cod/2/">Prefácio Cultural</a></h4>
+                            <small>Blog sobre literatura, cinema e cultura, por Adriano de Almeida</small>
+                          </div>
+                        </div>
+                        <!-- End Prefácio Cultural -->
+
+                        <!-- Rádio da Boca pra Fora -->
+                        <div class="blog media" id="ao-trabalho">
+                          <a href="" class="pull-left">
+                            <img src="img/blogs/prefacio.jpg" data-src="holder.js/64x64">
+                          </a>
+                          <div class="media-body">
+                            <h4 class="media-heading"><a href="http://blogsdooswald.com.br/blog/index/cod/6/">Rádio da Boca pra Fora</a></h4>
+                            <small>Sem descrição</small>
+                          </div>
+                        </div>
+                        <!-- End Rádio da Boca pra Fora -->
+
+                        <!-- Saber na Rede -->
+                        <div class="blog media" id="ao-trabalho">
+                          <a href="" class="pull-left">
+                            <img src="img/blogs/saber.jpg" data-src="holder.js/64x64">
+                          </a>
+                          <div class="media-body">
+                            <h4 class="media-heading"><a href="http://blogsdooswald.com.br/blog/index/cod/3/">Saber na Rede</a></h4>
+                            <small>Sobre conhecimento no mundo digital pela Equipe de Tecnologia Educacional</small>
+                          </div>
+                        </div>
+                        <!-- End Saber na Rede -->
+
+                         <!-- 12º Dimensão -->
+                        <div class="blog media" id="ao-trabalho">
+                          <a href="" class="pull-left">
+                            <img src="img/blogs/saber.jpg" data-src="holder.js/64x64">
+                          </a>
+                          <div class="media-body">
+                            <h4 class="media-heading"><a href="http://blogsdooswald.com.br/blog/index/cod/4/">12º Dimensão</a></h4>
+                            <small>Blog sobre ciência e tecnologia, por Jacó Izidro Moura</small>
+                          </div>
+                        </div>
+                        <!-- End 12º Dimensão -->
+
+                      </section>
+                    </div>
+                    <!-- End Blogs -->
                   </div>
 
-                  <div id="facebook-view">
-                    <div class="fb-like-box" data-href="http://www.facebook.com/platform" data-width="700" data-height="260" data-show-faces="false" data-stream="true" data-show-border="false" data-header="false"></div>
-                  </div>
                 </div>
 
               </div>
@@ -354,7 +446,6 @@
         </div>
 
         <!-- Required in application -->
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
@@ -364,6 +455,8 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <!-- End Application scripts -->
+
+        <!-- Past another external scripts here ;) -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
