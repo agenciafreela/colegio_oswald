@@ -1,0 +1,141 @@
+#main{
+  background: @blue;
+  min-height: 240px;
+  margin-top: 20px;
+  color: #FFF;
+  padding: 20px;
+  position: relative;
+
+  #search-form{
+    float: right;
+
+    input{
+      vertical-align: middle;
+    }
+  }
+
+  .menu li{
+    a{
+      background: @orange;
+      color: #FFF;
+      display: block;
+      padding: 10px;
+      margin: 20px 0 20px -30px;
+      position: relative;
+      font-size: 14px;
+      -webkit-transition: all .25s ease-out;
+         -moz-transition: all .25s ease-out;
+          -ms-transition: all .25s ease-out;
+           -o-transition: all .25s ease-out;
+              transition: all .25s ease-out;
+      -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+
+      &:hover{
+        background: @orange - #333;
+        text-decoration: none;
+
+        &:before{
+          border: 5px solid (@orange - #666);
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid transparent;
+        }
+      }
+
+      &:before{
+        content: "";
+        border: 5px solid (@orange - #333);
+        left: 0;
+        display: block;
+        bottom: -10px;
+        position: absolute;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid transparent;
+      }
+
+      small{
+        display: block;
+        font-size: 70%;
+        line-height: 1;
+      }
+    }
+
+    &:nth-child(even) a{
+      background: @green;
+
+      &:hover{
+        background: @green - #333;
+
+        &:before{
+          border: 5px solid (@green - #666);
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid transparent;
+        }
+      }
+
+      &:before{
+        border: 5px solid (@green - #333);
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid transparent;
+      }
+    }
+  }
+
+  .page{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    img.center{
+      margin-top: -20px;
+    }
+
+    h1{
+      font-size: 24px;
+    }
+
+    .submenu{
+      position: absolute;
+      height: 100%;
+      width: 225px;
+      top: 0;
+      left: 170px;
+      background: @green;
+      padding: 20px;
+      padding-top: 30px;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+
+      a{
+        color: #FFF;
+        font-size: 13px;
+
+        &.active{
+          color: @orange;
+        }
+      }
+    }
+
+    .text{
+      margin-left: 250px;
+      margin-top: -40px;
+    }
+  }
+
+  #comunicado{
+    background: @green;
+    padding: 20px;
+  }
+
+  .pages > .page:target ~ .page:last-child, .pages > .page {
+    display: none;
+  }
+  
+  .pages > :last-child, .pages > .page:target {
+    display: block;
+  }
+}

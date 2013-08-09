@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+NO_COMPRESS="--no-compress"
+if [ "$1" == "$NO_COMPRESS" ]; then
+	lessc less/application.less > css/application.css
+else
+	lessc less/application.less --yui-compress > css/application.css
+fi
